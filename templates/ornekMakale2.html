@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h2 class="card-title"> Teknolojinin Geleceği </h2>
+                    <p class="text-muted">Yazar: <strong> Utku Kartal </strong> | Tarih: 20 Ocak 2025 18:52 </p>
+                    <hr>
+                    <!-- Resim Alanı (Bootstrap ile) -->
+                     
+                     <div class="bg-light d-flex justify-content-center align-items-center rounded mb-4" style="height: 500px; width: 100%; border: 2px solid #ddd; overflow: hidden;">
+                        <img class="img-fluid rounded shadow-sm" src="https://picsum.photos/id/119/800/500" alt="Blog Image" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                    </div>
+                     
+                     
+                     
+                    
+                    <hr>
+                    {% comment %} <p class="card-text">Buraya blog yazısının ana içeriği gelir. Burada kullanıcılar, konu hakkında detaylı yazı okuyabilir. Bu yazı, birçok satırdan oluşabilir ve metin uzunluğu boyunca farklı paragraflar içerir.</p>
+                    <p class="card-text">Örnek olarak, blog yazısının içerisine görseller, linkler ve diğer multimedya öğeleri eklenebilir. Burada bazı ipuçları, tavsiyeler veya konuyla ilgili açıklamalar olabilir. Blog yazısının her bölümünde alt başlıklar ve numaralandırılmış listeler yer alabilir.</p>
+                    <p class="card-text">Son olarak, yazının sonunda genel bir değerlendirme veya sonucu anlatan bir paragraf yer alabilir. Yazının sonunda yazarın düşünceleri veya önerileri olabilir.</p> {% endcomment %}
+                    <div>
+                        <p class="lead"> Teknolojinin hayatımıza etkisi her geçen gün artıyor. Yapay zeka, nesnelerin interneti, artırılmış gerçeklik 
+                            ve kuantum bilgisayarlar gibi alanlardaki gelişmeler, gelecekte bizi bambaşka bir dünyaya taşıyacak. 
+                            Peki, önümüzdeki yıllarda teknoloji nasıl bir yol izleyecek? İşte gelecekte bizi bekleyen bazı önemli teknolojik yenilikler:</p>
+                        
+                        
+                        <h4>1. Yapay Zeka ve Makine Öğrenimi</h4>
+                        <p>
+                            Yapay zeka, günümüzde bile hayatımızın birçok alanına girmiş durumda. Gelecekte ise daha gelişmiş yapay zeka sistemleri, 
+                            sağlık, eğitim, güvenlik ve iş dünyasında devrim yaratabilir. Örneğin, doktorlar için teşhis koyan yapay zeka sistemleri 
+                            veya tamamen otonom çalışan fabrikalar görmek mümkün olacak.
+                        </p>
+                
+                        <h4>2. Nesnelerin İnterneti (IoT) ve Akıllı Şehirler</h4>
+                        <p>
+                            Gelecekte, nesnelerin interneti sayesinde evlerimiz, arabalarımız ve hatta şehirlerimiz daha akıllı hale gelecek. 
+                            Akıllı trafik sistemleri sayesinde trafik sıkışıklığı azalacak, enerji tüketimi daha verimli hale gelecek ve 
+                            güvenlik sistemleri daha gelişmiş olacak.
+                        </p>
+                
+                        <h4>3. Artırılmış Gerçeklik ve Sanal Gerçeklik</h4>
+                        <p>
+                            Eğitimden eğlenceye kadar birçok alanda kullanılabilecek artırılmış gerçeklik (AR) ve sanal gerçeklik (VR) 
+                            teknolojileri, gelecekte daha da yaygınlaşacak. Öğrenciler tarihi olayları birebir deneyimleyerek öğrenebilecek, 
+                            uzaktan çalışanlar sanal toplantı odalarında gerçekçi bir ortamda çalışabilecek.
+                        </p>
+                
+                        <h4>4. Kuantum Bilgisayarlar ve Veri İşleme</h4>
+                        <p>
+                            Geleneksel bilgisayarlar bile günümüzde inanılmaz işlem gücüne sahip olsa da, kuantum bilgisayarlar bu gücü katbekat 
+                            artıracak. Büyük veri analizi, kriptografi ve bilimsel araştırmalarda büyük bir devrim yaratması beklenen kuantum 
+                            bilgisayarlar, gelecekte daha yaygın hale gelecek.
+                        </p>
+                
+                        <h4>5. Uzay Teknolojileri ve Mars Kolonisi</h4>
+                        <p>
+                            Elon Musk ve diğer girişimciler sayesinde uzay keşfi artık sadece bilim kurgu değil. Önümüzdeki yıllarda Mars’a 
+                            insanlı yolculukların gerçekleşmesi planlanıyor. Belki de yakın gelecekte farklı gezegenlerde yaşam kurma çalışmalarına 
+                            şahit olacağız.
+                        </p>
+                
+                        <h4>Sonuç</h4>
+                        <p>
+                            Teknoloji hızla gelişmeye devam ediyor ve her geçen gün yeni buluşlarla karşılaşıyoruz. Önümüzdeki yıllarda bu 
+                            teknolojik ilerlemeler sayesinde daha bağlantılı, akıllı ve yenilikçi bir dünyada yaşayacağız. Teknolojiye ayak uydurmak 
+                            ve bu değişime adapte olmak, geleceğe hazırlıklı olmanın en önemli yollarından biri. 🚀💡
+                        </p>
+                    </div>
+                        
+                    
+                </div>
+            </div>
+            
+            <!-- Yorumlar -->
+            {% comment %} <div class="card shadow-sm">
+                <div class="card-body">
+                    <h4>Yorumlar</h4>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="3" placeholder="Yorum yapın..."></textarea>
+                    </div>
+                    <button class="btn btn-primary">Yorum Gönder</button>
+
+                    <hr>
+
+                    <div class="comment">
+                        <p><strong>Ali Yılmaz</strong> - <span class="text-muted">4 Mart 2025</span></p>
+                        <p>Çok faydalı bir yazı! Teşekkürler.</p>
+                    </div>
+                    <div class="comment">
+                        <p><strong>Ayşe Demir</strong> - <span class="text-muted">3 Mart 2025</span></p>
+                        <p>Yazıyı beğendim, ancak biraz daha fazla örnek olabilirdi.</p>
+                    </div>
+                </div>
+            </div> {% endcomment %}
+        </div>
+
+        <!-- Sidebar -->
+        {% comment %} <div class="col-lg-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5>Popüler Yazılar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Blog Yazısı 1</a></li>
+                        <li><a href="#">Blog Yazısı 2</a></li>
+                        <li><a href="#">Blog Yazısı 3</a></li>
+                        <li><a href="#">Blog Yazısı 4</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5>Kategoriler</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Teknoloji</a></li>
+                        <li><a href="#">Tasarım</a></li>
+                        <li><a href="#">Yazılım</a></li>
+                        <li><a href="#">Hayat</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> {% endcomment %}
+    </div>
+</div>
+{% endblock body %}

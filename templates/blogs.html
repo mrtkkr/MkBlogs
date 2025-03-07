@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+<div class="container mb-3">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="text-secondary">Makaleler</h3>
+            <hr>
+        </div>
+    </div>
+    <div class="row justify-content-end">
+        <div class="col-auto">
+            <form style="gap:5px;" class="d-flex" role="search">
+                {% csrf_token %}
+                <input class="form-control w-75" type="text" name="keyword" placeholder="Ara..." required>
+                <button class="btn btn-warning" type="submit">Ara</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% if blogs %}
+
+{% for blog in blogs %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                     <a style="text-decoration:none;" href="{% url 'blog:detail' blog.id %}" class="text-info"> <h2 class="card-title"> {{blog.title}} </h2></a>
+                    <p class="text-muted">Yazar: <strong> {{blog.author.username}} </strong> | Tarih: {{blog.created_date}} </p>
+                    <hr>
+                    <!-- Resim Alanı (Bootstrap ile) -->
+                     {% if blog.blog_image %}
+                     <a href="{% url 'blog:detail' blog.id %}" class="text-dark">
+                        <div class="bg-light d-flex justify-content-center align-items-center rounded mb-4" style="height: 500px; width: 100%; border: 2px solid #ddd; overflow: hidden;">
+                            <img class="img-fluid rounded shadow-sm" src="{{blog.blog_image.url}}" alt="Blog Image" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                        </div>
+                     </a>
+                     
+                     
+                     {% else %}
+                     <div class="alert alert-danger">Kullanıcı Resim Yüklemedi...</div>
+                     {% endif %}
+                    
+                    <hr>
+                    {% comment %} <p class="card-text">Buraya blog yazısının ana içeriği gelir. Burada kullanıcılar, konu hakkında detaylı yazı okuyabilir. Bu yazı, birçok satırdan oluşabilir ve metin uzunluğu boyunca farklı paragraflar içerir.</p>
+                    <p class="card-text">Örnek olarak, blog yazısının içerisine görseller, linkler ve diğer multimedya öğeleri eklenebilir. Burada bazı ipuçları, tavsiyeler veya konuyla ilgili açıklamalar olabilir. Blog yazısının her bölümünde alt başlıklar ve numaralandırılmış listeler yer alabilir.</p>
+                    <p class="card-text">Son olarak, yazının sonunda genel bir değerlendirme veya sonucu anlatan bir paragraf yer alabilir. Yazının sonunda yazarın düşünceleri veya önerileri olabilir.</p> {% endcomment %}
+                    <p class="lead">
+                        {{blog.content|safe|truncatewords:37}}
+                    </p>
+                    <a class="btn btn-warning" style="float:right;" href="{% url 'blog:detail' blog.id %}">Devamını Oku...</a>
+                </div>
+            </div>
+            
+            <!-- Yorumlar -->
+            {% comment %} <div class="card shadow-sm">
+                <div class="card-body">
+                    <h4>Yorumlar</h4>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="3" placeholder="Yorum yapın..."></textarea>
+                    </div>
+                    <button class="btn btn-primary">Yorum Gönder</button>
+
+                    <hr>
+
+                    <div class="comment">
+                        <p><strong>Ali Yılmaz</strong> - <span class="text-muted">4 Mart 2025</span></p>
+                        <p>Çok faydalı bir yazı! Teşekkürler.</p>
+                    </div>
+                    <div class="comment">
+                        <p><strong>Ayşe Demir</strong> - <span class="text-muted">3 Mart 2025</span></p>
+                        <p>Yazıyı beğendim, ancak biraz daha fazla örnek olabilirdi.</p>
+                    </div>
+                </div>
+            </div> {% endcomment %}
+        </div>
+
+        <!-- Sidebar -->
+        {% comment %} <div class="col-lg-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5>Popüler Yazılar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Blog Yazısı 1</a></li>
+                        <li><a href="#">Blog Yazısı 2</a></li>
+                        <li><a href="#">Blog Yazısı 3</a></li>
+                        <li><a href="#">Blog Yazısı 4</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5>Kategoriler</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Teknoloji</a></li>
+                        <li><a href="#">Tasarım</a></li>
+                        <li><a href="#">Yazılım</a></li>
+                        <li><a href="#">Hayat</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> {% endcomment %}
+    </div>
+</div>
+<br>
+
+{% endfor %}
+
+{% else %}
+<div class="alert alert-danger">Bu Blog da Herhangi Bir Makale Bulunamadı.</div>
+{% endif %}
+
+{% endblock body %}

@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+
+
+{% block body %}
+
+<div class="container p-5 mb-4 mt-5 bg-light rounded-3 d-flex justify-content-between align-items-center flex-lg-row flex-column">
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">Hoş Geldiniz!</h1>
+    <p class="col-md-8">Bu blogta geliştiriciler olarak blog yazılarınızı paylaşabilir ve insanlara yardımcı olabilirsiniz.</p>
+    <p class="col-md-8 fw-bold">Sen de kendi bloglarını yazmak, fikirlerini paylaşmak ve geliştiricilere ilham olmak ister misin? Hemen kayıt ol!</p>
+    <p class="card-text"><small class="text-muted" id="updateTime"></small></p>
+    <a href="{% url 'user:register' %}" class="btn btn-primary btn-lg">Kayıt Ol</a>
+  </div>
+  <div>
+    <img src="https://picsum.photos/id/5/500/500" class="img-fluid rounded" alt="Blog Görseli">
+  </div>
+</div>
+
+
+{% comment %} <p>
+{% if request.user.is_authenticated %}
+Giriş Yapılmış {{request.user.username}}
+{% else %}
+Giriş Yapılmamış
+{% endif %}
+</p> {% endcomment %}
+
+<!-- Blog Kartları -->
+<section class="container my-5">
+  <h2> Örnek Makaleler </h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <!-- Blog Kartı 1 -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://picsum.photos/id/29/500/300" class="card-img-top" alt="Doğa">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Doğa ile Barış</h5>
+          <p class="card-text">Doğanın içinde kaybolmak, zihninizi dinlendirir. İşte doğa ile barış yapmanın yolları...</p>
+          <a href="{% url 'ornekMakale3' %}" class="btn btn-primary mt-auto">Devamını Oku...</a>
+        </div>        
+      </div>
+    </div>
+
+    <!-- Blog Kartı 2 -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://picsum.photos/id/119/500/300" class="card-img-top" alt="Teknoloji">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Teknolojinin Geleceği</h5>
+          <p class="card-text">Teknolojinin hayatımıza etkisi her geçen gün artıyor. Peki gelecekte bizi neler bekliyor?</p>
+          <a href="{% url 'ornekMakale2' %}" class="btn btn-primary mt-auto">Devamını Oku...</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Kartı 3 -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://picsum.photos/seed/picsum/500/300" class="card-img-top" alt="Seyahat">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Dünyayı Keşfet</h5>
+          <p class="card-text">Seyahat etmek, dünyayı görmek ve farklı kültürleri keşfetmek açısından ruhumuzu besler...</p>
+          <a href="{% url 'ornekMakale' %}" class="btn btn-primary mt-auto">Devamını Oku...</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+{% endblock body %}

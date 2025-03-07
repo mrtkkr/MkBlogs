@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+{% block body %}
+{% comment %} <h3> Kontrol Paneli </h3>
+<hr>
+<p> Hoşgeldiniz <small> {{request.user.username}} </small> </p>
+<hr>
+
+<a class="btn btn-danger" href="">Makale Ekle</a>
+<hr> {% endcomment %}
+
+{% comment %} <div class="container d-flex justify-content-center align-items-start" style="height: 100vh;">
+    <div class="card shadow-lg p-4 rounded" style="width: 50%;">
+        <div class="card-header bg-primary text-white text-center">
+            <h3>Kontrol Paneli</h3>
+        </div>
+        <div class="card-body text-center">
+            <h5 class="mb-3">Hoşgeldiniz <strong>mert_koker</strong></h5>
+            <a href="{% url 'blog:addblog' %}" class="btn btn-danger btn-lg shadow">Makale Ekle</a>
+        </div>
+    </div>
+</div> {% endcomment %}
+
+{% comment %} <div class="container d-flex justify-content-center align-items-start" style="height: 100vh;">
+    <div class="card shadow-lg p-4 rounded" style="width: 100%; max-width: 600px;">
+        <div class="card-header bg-primary text-white text-center">
+            <h3>Kontrol Paneli</h3>
+        </div>
+        <div class="card-body text-center">
+            <h5 class="mb-3">Hoşgeldiniz <strong>mert_koker</strong></h5>
+            <a href="{% url 'blog:addblog' %}" class="btn btn-danger btn-lg shadow w-50">Makale Ekle</a>
+        </div>
+    </div>
+</div>
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table> {% endcomment %}
+
+
+  <div class="container d-flex justify-content-center align-items-start">
+    <div class="card shadow-lg p-4 rounded" style="width: 100%; max-width: 600px;">
+        <div class="card-header bg-primary text-white text-center">
+            <h3>Kontrol Paneli</h3>
+        </div>
+        <div class="card-body text-center">
+            <h5 class="mb-3">Hoşgeldiniz <strong>{{request.user.username}}</strong></h5>
+            <a href="{% url 'blog:addblog' %}" class="btn btn-danger btn-lg shadow w-50">Makale Ekle</a>
+        </div>
+    </div>
+</div>
+
+{% if blogs %}
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white">
+            <h4>Yazılarınız</h4>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Başlık</th>
+                            <th scope="col">Yazar</th>
+                            <th scope="col">Tarih</th>
+                            <th scope="col">Güncelle</th>
+                            <th scope="col">Sil</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for blog in blogs %}
+                        <tr>
+                            <th scope="row"> {{blog.id}} </th>
+                            {% comment %} hata var url de {% endcomment %}
+                            <td><a style="text-decoration:none;" href="{% url 'blog:detail' blog.id %}"> {{blog.title}} </a> </td>
+                            <td>{{blog.author.username}}</td>
+                            <td>{{blog.created_date}}</td>
+                            <td><a href="{% url 'blog:update' blog.id %}" class="btn btn-info btn-sm text-light">Güncelle</a></td>
+                            <td><a href="{% url 'blog:delete' blog.id %}" class="btn btn-info btn-sm text-light">Sil</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% else %}
+<div class="alert alert-danger mt-5">
+    Henüz Bir Makaleniz Bulunmuyor.
+</div>
+{% endif %}
+
+
+
+
+{% endblock body %}

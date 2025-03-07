@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h2 class="card-title"> Dünyayı Keşfet: Yeni Yerler, Yeni Deneyimler </h2>
+                    <p class="text-muted">Yazar: <strong> Emir Tekin </strong> | Tarih: 21 Nisan 2024 08:45 </p>
+                    <hr>
+                    <!-- Resim Alanı (Bootstrap ile) -->
+                     
+                     <div class="bg-light d-flex justify-content-center align-items-center rounded mb-4" style="height: 500px; width: 100%; border: 2px solid #ddd; overflow: hidden;">
+                        <img class="img-fluid rounded shadow-sm" src="https://picsum.photos/seed/picsum/800/500" alt="Blog Image" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                    </div>
+                     
+                     
+                     
+                    
+                    <hr>
+                    {% comment %} <p class="card-text">Buraya blog yazısının ana içeriği gelir. Burada kullanıcılar, konu hakkında detaylı yazı okuyabilir. Bu yazı, birçok satırdan oluşabilir ve metin uzunluğu boyunca farklı paragraflar içerir.</p>
+                    <p class="card-text">Örnek olarak, blog yazısının içerisine görseller, linkler ve diğer multimedya öğeleri eklenebilir. Burada bazı ipuçları, tavsiyeler veya konuyla ilgili açıklamalar olabilir. Blog yazısının her bölümünde alt başlıklar ve numaralandırılmış listeler yer alabilir.</p>
+                    <p class="card-text">Son olarak, yazının sonunda genel bir değerlendirme veya sonucu anlatan bir paragraf yer alabilir. Yazının sonunda yazarın düşünceleri veya önerileri olabilir.</p> {% endcomment %}
+                    <div>
+                        <p class="lead">Seyahat etmek, dünyayı görmek ve farklı kültürleri keşfetmek açısından ruhumuzu besler. Yeni insanlarla tanışmak, farklı mutfakları deneyimlemek ve geçmişin izlerini sürebileceğimiz tarihi mekânları gezmek bizlere bambaşka bir bakış açısı kazandırır. Peki, seyahat etmenin bize sunduğu avantajlar neler? Gelin birlikte göz atalım.</p>
+                        
+                        
+                        <h4>1. Farklı Kültürleri Tanıma</h4>
+                        <p>
+                            Her ülke, kendine özgü gelenekleri, yemekleri ve yaşam tarzlarıyla eşsizdir. Seyahat ettiğinizde, 
+                            farklı kültürleri yerinde deneyimleyerek dünyaya daha geniş bir perspektiften bakabilirsiniz. 
+                            Bir kahve molası için İtalya’daki küçük bir kafeye oturduğunuzu veya Japonya’da geleneksel 
+                            bir çay seremonisine katıldığınızı hayal edin. İşte bu deneyimler, insanın hayatına renk katan detaylar oluyor!
+                        </p>
+                
+                        <h4>2. Yeni Tatlar Keşfetme</h4>
+                        <p>
+                            Bir yeri tanımanın en keyifli yollarından biri de mutfağını keşfetmektir. Fransa’da taze pişmiş 
+                            kruvasanların tadını çıkarmak, Tayland’da baharatlı sokak lezzetlerini denemek veya Türkiye’de 
+                            geleneksel bir kahvaltıyla güne başlamak… Her ülkenin kendine özgü yemek kültürü, gezginler 
+                            için unutulmaz bir deneyim sunar.
+                        </p>
+                
+                        <h4>3. Kendi Hikayeni Yaz</h4>
+                        <p>
+                            Seyahat etmek, sadece yeni yerler görmek değil, aynı zamanda yeni anılar biriktirmektir. Doğayla iç içe 
+                            bir kamp yapmak, tarihi bir şehirde kaybolmak veya okyanus dalgalarıyla dans etmek... Her anı, sizin 
+                            için bir hikâyeye dönüşebilir.
+                        </p>
+                
+                        <h4>4. Fotoğrafçılar İçin Cennet</h4>
+                        <p>
+                            Eğer fotoğraf çekmeyi seviyorsanız, seyahat etmek tam size göre! Doğal güzellikleri, tarihi yapıları ve 
+                            sokak yaşamını fotoğraflayarak gezdiğiniz yerleri ölümsüzleştirebilirsiniz. Gün batımında çekilen bir 
+                            manzara fotoğrafı veya bir pazar yerindeki renkli görüntüler, sizin için harika hatıralar olabilir.
+                        </p>
+                
+                        <h4>5. Özgüven ve Bağımsızlık Kazanma</h4>
+                        <p>
+                            Farklı ülkeleri gezmek, özellikle de tek başınıza seyahat ediyorsanız, özgüveninizi artırır. Yeni bir 
+                            şehri keşfetmek, farklı bir dil konuşan insanlarla iletişim kurmak ve beklenmedik durumlarla başa çıkmak, 
+                            kendinizi daha güçlü ve bağımsız hissetmenizi sağlar.
+                        </p>
+                
+                        <h4>Sonuç</h4>
+                        <p>
+                            Seyahat etmek, sadece fiziksel olarak bir yerden bir yere gitmek değil, aynı zamanda ruhsal bir yolculuktur. 
+                            Yeni insanlar, yeni deneyimler ve keşfedilmeyi bekleyen muhteşem yerler… Eğer fırsatınız varsa, bir valiz 
+                            hazırlayın ve dünyayı keşfetmeye başlayın! 🌍✈️
+                        </p>
+                    </div>
+                        
+                    
+                </div>
+            </div>
+            
+            <!-- Yorumlar -->
+            {% comment %} <div class="card shadow-sm">
+                <div class="card-body">
+                    <h4>Yorumlar</h4>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="3" placeholder="Yorum yapın..."></textarea>
+                    </div>
+                    <button class="btn btn-primary">Yorum Gönder</button>
+
+                    <hr>
+
+                    <div class="comment">
+                        <p><strong>Ali Yılmaz</strong> - <span class="text-muted">4 Mart 2025</span></p>
+                        <p>Çok faydalı bir yazı! Teşekkürler.</p>
+                    </div>
+                    <div class="comment">
+                        <p><strong>Ayşe Demir</strong> - <span class="text-muted">3 Mart 2025</span></p>
+                        <p>Yazıyı beğendim, ancak biraz daha fazla örnek olabilirdi.</p>
+                    </div>
+                </div>
+            </div> {% endcomment %}
+        </div>
+
+        <!-- Sidebar -->
+        {% comment %} <div class="col-lg-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5>Popüler Yazılar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Blog Yazısı 1</a></li>
+                        <li><a href="#">Blog Yazısı 2</a></li>
+                        <li><a href="#">Blog Yazısı 3</a></li>
+                        <li><a href="#">Blog Yazısı 4</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5>Kategoriler</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Teknoloji</a></li>
+                        <li><a href="#">Tasarım</a></li>
+                        <li><a href="#">Yazılım</a></li>
+                        <li><a href="#">Hayat</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> {% endcomment %}
+    </div>
+</div>
+{% endblock body %}

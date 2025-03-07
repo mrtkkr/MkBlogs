@@ -1,0 +1,41 @@
+
+
+{% extends "layout.html" %}
+{% load static %}
+{% block body %}
+
+ <!-- Hakkımızda Bölümü -->
+<div class="container py-5">
+    <section class="d-flex justify-content-between align-items-center flex-lg-row flex-column text-lg-start">
+      <div class="col-lg-7 col-12 mb-4 mb-lg-0">
+        <div class="text-start py-1">
+          <h1 class="fw-bold mb-4 text-primary">Hakkımızda</h1>
+          <p class="text-muted fs-5">
+            Merhaba, ben Mert Köker. Atatürk Üniversitesi Yazılım Mühendisliği 4. sınıf öğrencisiyim. Bu siteyi, teknolojinin gücünü kullanarak bilgi paylaşımını kolaylaştırmak ve insanlara değerli içerikler sunmak amacıyla geliştirdim. Django ile sıfırdan inşa ettiğim bu platform, <strong>MkBlogs</strong> , kullanıcıların kendi hesaplarını oluşturup, istedikleri konuda yazılar paylaşabileceği, diğer kullanıcıların yazılarına yorum yapabileceği ve hatta yorumlara yorum yazabileceği bir alan sunmaktadır.
+          </p>
+          <p class="text-muted fs-5">
+            Amacım, her bir ziyaretçiye değerli içerikler sunarak onların hayatlarını daha anlamlı hale getirmelerine yardımcı olmaktır. <strong>MkBlogs</strong>, yalnızca benim yazılarımı değil, aynı zamanda kullanıcıların da kendi yazılarını oluşturabilecekleri bir platformdur. Buraya kayıt olan her kullanıcı, istediği konuda makale yazabilir ve kendi deneyimlerini, görüşlerini paylaşabilir. Böylece site, sadece benim değil, herkesin katkıda bulunduğu bir içerik alanına dönüşür.
+          </p>
+          <p class="text-muted fs-5">
+            Sitemin en önemli özelliklerinden biri, kullanıcıların yazılarına görseller ekleyebilmesi ve kolayca içerik oluşturabilmesidir. Ayrıca, kullanıcılar herhangi bir sebeple parolalarını unuttuklarında, şifre sıfırlama özelliklerinden faydalanarak hesaplarına kolayca yeniden erişebilirler. İletişim sayfası aracılığıyla ise bizlere ulaşabilir ve sorularınızı, önerilerinizi bizimle paylaşabilirsiniz.
+          </p>
+          <p class="text-muted fs-5">
+            Bu platform, sadece içerik oluşturmayı değil, aynı zamanda başkalarının görüşlerini dinlemeyi ve yorumlarla etkileşimde bulunmayı teşvik eder. Her yazıya yapılan yorumlar, tartışmaların sağlıklı bir şekilde ilerlemesine yardımcı olur. Hem yazılar hem de yorumlar, topluluğumuzu daha güçlü ve anlamlı kılacak şekilde sürekli gelişmektedir. Hem yeni yazılar keşfetmek hem de fikirlerinizi paylaşmak için herkese açık bir alan sunulmaktadır.
+          </p>
+        </div>
+      </div>
+  
+      <div class="col-lg-5 col-12">
+        <div class="overflow-hidden rounded ">
+          <img src="{% static 'images/pexels-cottonbro-4065155.jpg' %}" class="img-fluid rounded" alt="Blog Takımı">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  
+
+
+{% endblock body %}
+
+

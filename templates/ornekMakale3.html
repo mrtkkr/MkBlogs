@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h2 class="card-title"> Doğa ile Barış </h2>
+                    <p class="text-muted">Yazar: <strong> Emre Görgün </strong> | Tarih: 19 Mayıs 2023 19:05 </p>
+                    <hr>
+                    <!-- Resim Alanı (Bootstrap ile) -->
+                     
+                     <div class="bg-light d-flex justify-content-center align-items-center rounded mb-4" style="height: 500px; width: 100%; border: 2px solid #ddd; overflow: hidden;">
+                        <img class="img-fluid rounded shadow-sm" src="https://picsum.photos/id/29/800/500" alt="Blog Image" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                    </div>
+                     
+                     
+                     
+                    
+                    <hr>
+                    {% comment %} <p class="card-text">Buraya blog yazısının ana içeriği gelir. Burada kullanıcılar, konu hakkında detaylı yazı okuyabilir. Bu yazı, birçok satırdan oluşabilir ve metin uzunluğu boyunca farklı paragraflar içerir.</p>
+                    <p class="card-text">Örnek olarak, blog yazısının içerisine görseller, linkler ve diğer multimedya öğeleri eklenebilir. Burada bazı ipuçları, tavsiyeler veya konuyla ilgili açıklamalar olabilir. Blog yazısının her bölümünde alt başlıklar ve numaralandırılmış listeler yer alabilir.</p>
+                    <p class="card-text">Son olarak, yazının sonunda genel bir değerlendirme veya sonucu anlatan bir paragraf yer alabilir. Yazının sonunda yazarın düşünceleri veya önerileri olabilir.</p> {% endcomment %}
+                    <div>
+                        <p class="lead"> Doğanın içinde kaybolmak, zihninizi dinlendirir ve ruhunuzu yeniler. Günlük hayatın stresi, şehir yaşamının gürültüsü ve dijital dünyanın karmaşası arasında doğa, bizlere huzur dolu bir kaçış sunar. Peki, doğa ile daha güçlü bir bağ kurmak ve onunla barış içinde yaşamak için neler yapabiliriz? İşte doğa ile barış yapmanın yolları:</p>
+                        
+                        
+                        <h4>1. Doğa Yürüyüşlerine Çıkın</h4>
+                        <p>
+                            Ormanda yürümek, deniz kenarında dolaşmak veya bir dağın zirvesine tırmanmak… Doğada yürüyüş yapmak hem fiziksel 
+                            hem de zihinsel olarak rahatlamanıza yardımcı olur. Üstelik temiz hava almak ve yeşillikler içinde vakit geçirmek stres seviyenizi azaltır.
+                        </p>
+                
+                        <h2>2. Kamp Yaparak Doğayla İç İçe Olun</h2>
+                        <p>
+                            Bir geceyi yıldızların altında geçirmek, doğanın seslerini dinleyerek uykuya dalmak harika bir deneyimdir. Kamp yapmak, 
+                            doğanın sunduğu güzellikleri yakından hissetmenizi sağlar ve şehir yaşamının getirdiği karmaşadan uzaklaşmanıza yardımcı olur.
+                        </p>
+                
+                        <h2>3. Bahçecilik ve Bitki Yetiştirme</h2>
+                        <p>
+                            Doğa ile bağ kurmanın bir başka yolu da bitki yetiştirmektir. Balkonunuzda küçük bir sebze bahçesi oluşturabilir, çiçekler 
+                            dikebilir veya bonsai gibi özel bitkilerle ilgilenebilirsiniz. Toprakla uğraşmak, insanın iç huzurunu artırır ve doğanın 
+                            döngüsünü daha yakından anlamanıza yardımcı olur.
+                        </p>
+                
+                        <h2>4. Doğayı Fotoğraflayın ve Onu Ölümsüzleştirin</h2>
+                        <p>
+                            Doğa, eşsiz manzaraları ve renkleriyle mükemmel bir ilham kaynağıdır. Bir fotoğraf makinesi veya telefon ile doğadaki güzellikleri 
+                            yakalayarak, anılarınıza ekleyebilirsiniz. Gün batımı, nehir kenarında açan çiçekler veya bir kuşun kanat çırpışı… 
+                            Hepsi doğanın sunduğu mucizelerden sadece birkaçıdır.
+                        </p>
+                
+                        <h2>5. Doğaya Saygılı Yaşayın</h2>
+                        <p>
+                            Doğa ile barış içinde yaşamak, ona zarar vermemekle başlar. Geri dönüşümü destekleyerek, plastik kullanımını azaltarak ve doğada iz 
+                            bırakmadan vakit geçirerek çevremize olan duyarlılığımızı artırabiliriz. Küçük adımlar bile doğanın korunmasına büyük katkılar sağlayabilir.
+                        </p>
+                
+                        <h2>Sonuç</h2>
+                        <p>
+                            Doğa, bizlere huzur, dinginlik ve yaşam enerjisi sunar. Onunla barış içinde yaşamak, hem fiziksel hem de ruhsal sağlığımız için önemlidir. 
+                            Bir doğa yürüyüşü planlayın, bitkilerle ilgilenin veya sadece dışarı çıkıp temiz havanın tadını çıkarın. Unutmayın, doğa bizim evimizdir ve 
+                            ona iyi baktığımız sürece bize karşılığını mutlaka verir! 🌿🌍
+                        </p>
+                    </div>
+                        
+                    
+                </div>
+            </div>
+            
+            <!-- Yorumlar -->
+            {% comment %} <div class="card shadow-sm">
+                <div class="card-body">
+                    <h4>Yorumlar</h4>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="3" placeholder="Yorum yapın..."></textarea>
+                    </div>
+                    <button class="btn btn-primary">Yorum Gönder</button>
+
+                    <hr>
+
+                    <div class="comment">
+                        <p><strong>Ali Yılmaz</strong> - <span class="text-muted">4 Mart 2025</span></p>
+                        <p>Çok faydalı bir yazı! Teşekkürler.</p>
+                    </div>
+                    <div class="comment">
+                        <p><strong>Ayşe Demir</strong> - <span class="text-muted">3 Mart 2025</span></p>
+                        <p>Yazıyı beğendim, ancak biraz daha fazla örnek olabilirdi.</p>
+                    </div>
+                </div>
+            </div> {% endcomment %}
+        </div>
+
+        <!-- Sidebar -->
+        {% comment %} <div class="col-lg-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5>Popüler Yazılar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Blog Yazısı 1</a></li>
+                        <li><a href="#">Blog Yazısı 2</a></li>
+                        <li><a href="#">Blog Yazısı 3</a></li>
+                        <li><a href="#">Blog Yazısı 4</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5>Kategoriler</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Teknoloji</a></li>
+                        <li><a href="#">Tasarım</a></li>
+                        <li><a href="#">Yazılım</a></li>
+                        <li><a href="#">Hayat</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> {% endcomment %}
+    </div>
+</div>
+{% endblock body %}
